@@ -19,7 +19,7 @@ public class Equation {
 		
 		if(myRank==0)
 		{
-		String fileName="c:\\data.txt";
+		String fileName="data.txt";
 		File file = new File(fileName);
 	    try {
 	        Scanner scanner = new Scanner(file);
