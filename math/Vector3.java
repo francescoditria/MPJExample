@@ -18,6 +18,7 @@ public class Vector3 {
 		int tag=100;
 		int i;
 		
+		//fase di input dei dati (processo root)
 		if(myRank==0)
 		{
 			int j;
@@ -34,7 +35,7 @@ public class Vector3 {
 		//operazione di riduzione dei dati
 		MPI.COMM_WORLD.Reduce(sendbuf, 0, recvbuf, 0, 1, MPI.INT, MPI.SUM, 0);
 		
-		//stampa del risultato finale
+		//stampa del risultato finale (processo root)
 		if(myRank==0)
 			System.out.println(recvbuf[0]);
 		
